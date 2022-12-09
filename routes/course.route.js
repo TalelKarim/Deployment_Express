@@ -10,12 +10,12 @@ import {
 } from '../controllers/course.controller.js';
 import Multer from '../Middlewares/multer-config.course.js';
 
-router.get('/course', auth, getAllCourses);
+router.get('/course', getAllCourses);
 
-router.get('/onecourse/:id', auth, getOneCourse);
+router.get('/onecourse/:id', getOneCourse);
 
-router.post('/course/register', Multer, auth, AddCourse);
+router.post('/course/register', Multer, AddCourse);
 
-router.get('/course/filter', auth, SearchCourse);
+router.get('/course/filter', SearchCourse);
 
 export default router;

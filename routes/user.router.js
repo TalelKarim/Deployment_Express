@@ -14,18 +14,18 @@ import {
 
 import Multer from '../Middlewares/multer-config.user.js';
 
-router.get('/user/check', auth, filterUsers);
+router.get('/user/check',  filterUsers);
 
-router.get('/user', auth, getAllUsers);
+router.get('/user',  getAllUsers);
 
-router.get('/oneuser/:id', auth, getOneUser);
+router.get('/oneuser/:id',  getOneUser);
 
 router.post('/user/register', Multer, Registration);
 
-router.put('/user/update/:id', Multer, auth, updateUser);
+router.put('/user/update/:id', Multer,  updateUser);
 
 router.post('/user/login', Multer, Login);
 
-router.get('/user/filter', auth, SearchUser);
+router.get('/user/filter',  SearchUser);
 
 export default router;

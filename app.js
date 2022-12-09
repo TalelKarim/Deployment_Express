@@ -10,10 +10,12 @@ import courseRouter from './routes/course.route.js';
 import { dirname } from 'path';
 import { fileURLToPath } from 'url';
 
+
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 dotEnv.config();
 const app = express();
+
 
 connectDB();
 
